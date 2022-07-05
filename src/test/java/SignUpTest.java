@@ -69,100 +69,14 @@ public class SignUpTest {
         driver.findElement(By.cssSelector("[value=Continue]")).click();
 
         // Add check
-        WebElement errorMessage = new WebElement() {
-            @Override
-            public <X> X getScreenshotAs(OutputType<X> outputType) throws WebDriverException {
-                return null;
-            }
 
-            @Override
-            public void click() {
-
-            }
-
-            @Override
-            public void submit() {
-
-            }
-
-            @Override
-            public void sendKeys(CharSequence... charSequences) {
-
-            }
-
-            @Override
-            public void clear() {
-
-            }
-
-            @Override
-            public String getTagName() {
-                return null;
-            }
-
-            @Override
-            public String getAttribute(String s) {
-                return null;
-            }
-
-            @Override
-            public boolean isSelected() {
-                return false;
-            }
-
-            @Override
-            public boolean isEnabled() {
-                return false;
-            }
-
-            @Override
-            public String getText() {
-                return null;
-            }
-
-            @Override
-            public List<WebElement> findElements(By by) {
-                return null;
-            }
-
-            @Override
-            public WebElement findElement(By by) {
-                return null;
-            }
-
-            @Override
-            public boolean isDisplayed() {
-                return false;
-            }
-
-            @Override
-            public Point getLocation() {
-                return null;
-            }
-
-            @Override
-            public Dimension getSize() {
-                return null;
-            }
-
-            @Override
-            public Rectangle getRect() {
-                return null;
-            }
-
-            @Override
-            public String getCssValue(String s) {
-                return null;
-            }
-        };
+        boolean isErrorMessageDisplayed = false;
         try {
-            errorMessage = driver.findElement(By.className("error_message"));
+            isErrorMessageDisplayed = driver.findElement(By.className("error_message")).isDisplayed();
         } catch (Exception e) {
             e.printStackTrace();
             driver.quit();
         }
-
-        boolean isErrorMessageDisplayed = errorMessage.isDisplayed();
         driver.quit();
         Assert.assertTrue(isErrorMessageDisplayed, "Error message isn't displayed");
     }
@@ -401,100 +315,14 @@ public class SignUpTest {
         driver.findElement(By.cssSelector("[value=Register]")).click();
 
         // Add check
-        WebElement errorMessage = new WebElement() {
-            @Override
-            public void click() {
 
-            }
-
-            @Override
-            public void submit() {
-
-            }
-
-            @Override
-            public void sendKeys(CharSequence... charSequences) {
-
-            }
-
-            @Override
-            public void clear() {
-
-            }
-
-            @Override
-            public String getTagName() {
-                return null;
-            }
-
-            @Override
-            public String getAttribute(String s) {
-                return null;
-            }
-
-            @Override
-            public boolean isSelected() {
-                return false;
-            }
-
-            @Override
-            public boolean isEnabled() {
-                return false;
-            }
-
-            @Override
-            public String getText() {
-                return null;
-            }
-
-            @Override
-            public List<WebElement> findElements(By by) {
-                return null;
-            }
-
-            @Override
-            public WebElement findElement(By by) {
-                return null;
-            }
-
-            @Override
-            public boolean isDisplayed() {
-                return false;
-            }
-
-            @Override
-            public Point getLocation() {
-                return null;
-            }
-
-            @Override
-            public Dimension getSize() {
-                return null;
-            }
-
-            @Override
-            public Rectangle getRect() {
-                return null;
-            }
-
-            @Override
-            public String getCssValue(String s) {
-                return null;
-            }
-
-            @Override
-            public <X> X getScreenshotAs(OutputType<X> outputType) throws WebDriverException {
-                return null;
-            }
-        };
-
+        boolean isErrorMessageDisplayed = false;
         try {
-            errorMessage = driver.findElement(By.className("error_message"));
+            isErrorMessageDisplayed = driver.findElement(By.className("error_message")).isDisplayed();
         } catch (Exception e) {
             e.printStackTrace();
             driver.quit();
         }
-        boolean isErrorMessageDisplayed = errorMessage.isDisplayed();
         driver.quit();
         Assert.assertTrue(isErrorMessageDisplayed, "Error message isn't displayed");
     }
