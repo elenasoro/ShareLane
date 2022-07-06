@@ -29,6 +29,7 @@ public class SignUpTest {
         driver.quit();
         Assert.assertTrue(isRegisterDisplayed, "'Register' button isn't displayed");
 
+
     }
 
     @Test
